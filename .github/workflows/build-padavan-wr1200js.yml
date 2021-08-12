@@ -83,7 +83,6 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_INCLUDE_VLMCSD/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_LRZSZ/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_HTOP/d' .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_HTOP/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_IPERF3/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_DUMP1090/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_RTL_SDR/d' .config
@@ -135,7 +134,6 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_VLMCSD=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_LRZSZ=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_HTOP=n" >> .config
-        echo "CONFIG_FIRMWARE_INCLUDE_HTOP=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_IPERF3=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_DUMP1090=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_RTL_SDR=n" >> .config
@@ -155,5 +153,5 @@ jobs:
       uses: actions/upload-artifact@master
       if: always()
       with:
-        name: Padavan-packages
+        name: Padavan-$TNAME-$(date +"%Y%m%d%H%M")
         path: /opt/images
