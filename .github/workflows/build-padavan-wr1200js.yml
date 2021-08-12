@@ -151,5 +151,5 @@ jobs:
       uses: actions/upload-artifact@master
       if: always()
       with:
-        name: Padavan-$TNAME-$(date +"%Y%m%d%H%M")
+        name: Padavan
         path: /opt/images
