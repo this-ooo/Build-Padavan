@@ -73,13 +73,13 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_INCLUDE_HDPARM/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_PARTED/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_XUPNPD/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_FFMPEG_NEW/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_ARIA/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_ARIA_WEB_CONTROL/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_NJIT_CLIENT/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_NAPT66/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_TTYD/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_NANO/d' .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_SRELAY/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_VLMCSD/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_LRZSZ/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_HTOP/d' .config
@@ -88,7 +88,6 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_INCLUDE_RTL_SDR/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_MTR/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SOCAT/d' .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_SRELAY/d' .config
         ######################################################################
         #以下选项是定义你需要的功能（y=集成,n=忽略），重新写入到.config文件
         ######################################################################
@@ -124,13 +123,13 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_HDPARM=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_PARTED=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_XUPNPD=n" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_FFMPEG_NEW=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_ARIA=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_ARIA_WEB_CONTROL=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_NJIT_CLIENT=n" >> .config
-        echo "CONFIG_FIRMWARE_INCLUDE_NAPT66=y" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_NAPT66=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_TTYD=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_NANO=n" >> .config
-        echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_VLMCSD=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_LRZSZ=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_HTOP=n" >> .config
@@ -139,7 +138,6 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_RTL_SDR=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_MTR=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_SOCAT=y" >> .config
-        echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=n" >> .config
         #########################################################################################
         #自定义添加其它功能请参考源码configs/templates/目录下的config文件。按照上面的格式添加即可
         #格式如下：
